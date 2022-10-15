@@ -29,7 +29,7 @@ const eventController = {
 
     all: async (req, res) => {
         let events
-        let order = 'desc'
+        let order = 'asc'
         let query = {}
         if (req.query.category) {
             query.category = new RegExp(req.query.category, 'i')
@@ -41,7 +41,7 @@ const eventController = {
             order = req.query.order
         }
         try {
-            events = await Event.find(query).sort({date: req.query.order})
+            events = await Event.find(query).sort({date: order})
             events = events.map(e => {
                 if (e.assistance) {
                     return {
