@@ -1,4 +1,5 @@
 const Event = require('../models/Event')
+let actualDate = new Date("2022-10-15")
 
 const eventController = {
     
@@ -40,6 +41,12 @@ const eventController = {
         if (req.query.order) {
             order = req.query.order
         }
+        if (req.query.time==='past') {
+            query.date = { $lt: actualDate }
+        } else if (req.query.time==='upcoming') {
+            query.date = { $gte: actualDate }
+        }
+        console.log(query)
         try {
             events = await Event.find(query).sort({date: order})
             events = events.map(e => {
@@ -72,7 +79,7 @@ const eventController = {
                 }
             })
             res.json({
-                date: "2022-10-15",
+                date: actualDate,
                 events: events
             })
         } catch (err) {
