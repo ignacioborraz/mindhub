@@ -458,15 +458,27 @@ let events = [
 ]
 
 events.forEach(event => {
-    Event.create({
-        name: event.name,
-        image: event.image,
-        date: event.date,
-        description: event.description,
-        category: event.category,
-        place: event.place,
-        capacity: event.capacity,
-        assistance: event.assistance? event.assistance : null,
-        price: event.price,
-    })
+    event.assistance ?
+        Event.create({
+            name: event.name,
+            image: event.image,
+            date: event.date,
+            description: event.description,
+            category: event.category,
+            place: event.place,
+            capacity: event.capacity,
+            assistance:  event.assistance,
+            price: event.price,
+        }) :
+        Event.create({
+            name: event.name,
+            image: event.image,
+            date: event.date,
+            description: event.description,
+            category: event.category,
+            place: event.place,
+            capacity: event.capacity,
+            estimate:  event.capacity,
+            price: event.price,
+        })
 })

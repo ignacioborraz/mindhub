@@ -33,6 +33,9 @@ const schema = new mongoose.Schema({
     assistance: {
         type: Number
     },
+    estimate: {
+        type: Number
+    },
     price: {
         type: Number,
         required: true
