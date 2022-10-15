@@ -41,8 +41,36 @@ const eventController = {
             order = req.query.order
         }
         try {
-            events = await Event.find(query)
-                .sort({date: req.query.order})
+            events = await Event.find(query).sort({date: req.query.order})
+            events = events.map(e => {
+                if (e.assistance) {
+                    return {
+                        id: e._id,
+                        name: e.name,
+                        image: e.image,
+                        date: e.date,
+                        description: e.description,
+                        category: e.category,
+                        place: e.place,
+                        capacity: e.capacity,
+                        assistance: e.assistance,
+                        price: e.price
+                    }
+                } else {
+                    return {
+                        id: e._id,
+                        name: e.name,
+                        image: e.image,
+                        date: e.date,
+                        description: e.description,
+                        category: e.category,
+                        place: e.place,
+                        capacity: e.capacity,
+                        estimate: e.estimate,
+                        price: e.price
+                    }
+                }
+            })
             res.json({
                 date: "2022-10-15",
                 events: events
