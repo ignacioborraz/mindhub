@@ -93,11 +93,7 @@ const eventController = {
                 _id: id
             })
             if (event) {
-                res.status(200).json({
-                    message: "you get one event",
-                    response: event,
-                    success: true
-                })
+                res.status(200).json({ event })
             } else {
                 res.status(404).json({
                     message: "could't find event",
