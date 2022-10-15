@@ -45,7 +45,7 @@ let events = [
     },{
         name: "BestSeller",
         image: "https://firebasestorage.googleapis.com/v0/b/amazing-events-364201.appspot.com/o/events%2Fbook5.jpg?alt=media&token=3b2fe8d4-8e08-4418-943d-f523a7145f41",
-        date: "2021-10-06",
+        date: "2023-01-06",
         description: "Get to know the best works of literature and take the one that catches you the most.",
         category: "Books",
         place: "Multi Space",
@@ -54,7 +54,7 @@ let events = [
     },{
         name: "Just Harry",
         image: "https://firebasestorage.googleapis.com/v0/b/amazing-events-364201.appspot.com/o/events%2Fbook6.jpg?alt=media&token=e21ab0b3-bcc0-4f20-b19f-64a0081e4051",
-        date: "2021-10-06",
+        date: "2023-02-26",
         description: "If you're a Potterhead you'll love this unique convention held in the city.",
         category: "Books",
         place: "Multi Space",
@@ -349,7 +349,6 @@ let events = [
         category: "Party",
         place: "Monumental Theater",
         capacity: 50000,
-        assistance: 49905,
         price: 10
     },{
         name: "Cultures",

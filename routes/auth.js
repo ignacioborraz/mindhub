@@ -8,7 +8,7 @@ const {
     signIn,
     signInToken,
     signOut
-} = require('../controllers/userController')
+} = require('../controllers/auth')
 
 router.post('/signup', signUp);
 router.get('/verify/:code', verifyMail);

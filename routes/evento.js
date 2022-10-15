@@ -8,7 +8,7 @@ const {
     read,
     update,
     destroy
-} = require('../controllers/event')
+} = require('../controllers/evento')
 
 router.get('/', all)
 router.get('/:id', read)
