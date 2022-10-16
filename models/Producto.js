@@ -1,49 +1,35 @@
 const mongoose = require('mongoose')
 
 const schema = new mongoose.Schema({
-    name: {
+    nombre: {
         type: String,
         required: true,
     },
-    image: {
+    imagen: {
         type: String,
         required: true,
     },
-    date: {
-        type: Date,
-        required: true
-    },
-    description: {
+    descripcion: {
         type: String,
         required: true
     },
-    category: {
+    tipo: {
         type: String,
         required: true,
     },
-    place: {
-        type: String,
-        required: true
-    },
-    capacity: {
+    precio: {
         type: Number,
         required: true
     },
-    assistance: {
-        type: Number
-    },
-    estimate: {
-        type: Number
-    },
-    price: {
+    stock: {
         type: Number,
         required: true
     }
 })
 
-const Event = mongoose.model(
-    'eventos',
+const Producto = mongoose.model(
+    'productos',
     schema
 )
 
-module.exports = Event
+module.exports = Producto
