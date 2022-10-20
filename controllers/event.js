@@ -193,6 +193,88 @@ const eventController = {
                 success: false
             })
         }
+    },
+
+    create2: async (req, res) => {
+    req.body.permition = true
+        try {
+            let event = await new Event(req.body).save()
+            res.status(201).json({
+                date: 'event created',
+                success: true,
+                id: event._id
+            })
+        } catch (error) {
+            console.log(error)
+            res.status(400).json({
+                message: error.message,
+                success: false
+            })
+        }
+    },
+
+    update2: async (req, res) => {
+        const {
+            id
+        } = req.params
+        try {
+            let event = await Event.findOne({
+                _id: id
+            })
+            if (event?.permition) {
+                await Event.findOneAndUpdate({
+                    _id: id
+                }, req.body, {
+                    new: true
+                })
+                res.status(200).json({
+                    message: "event updated",
+                    success: true
+                })
+            } else {
+                res.status(404).json({
+                    message: "could't find/updated event",
+                    success: false
+                })
+            }
+        } catch (error) {
+            console.log(error)
+            res.status(400).json({
+                message: "error",
+                success: false
+            })
+        }
+    },
+
+    destroy2: async (req, res) => {
+        const {
+            id
+        } = req.params
+        try {
+            let event = await Event.findOne({
+                _id: id
+            })
+            if (event?.permition) {
+                await Event.findOneAndDelete({
+                    _id: id
+                })
+                res.status(200).json({
+                    message: "event deleted",
+                    success: true
+                })
+            } else {
+                res.status(404).json({
+                    message: "could't find/delete event",
+                    success: false
+                })
+            }
+        } catch (error) {
+            console.log(error)
+            res.status(400).json({
+                message: "error",
+                success: false
+            })
+        }
     }
 
 }

@@ -468,6 +468,7 @@ events.forEach(event => {
             capacity: event.capacity,
             assistance:  event.assistance,
             price: event.price,
+            permition: false
         }) :
         Event.create({
             name: event.name,
@@ -479,5 +480,6 @@ events.forEach(event => {
             capacity: event.capacity,
             estimate:  event.capacity,
             price: event.price,
+            permition: false
         })
 })

@@ -38,6 +38,10 @@ const schema = new mongoose.Schema({
     price: {
         type: Number,
         required: true
+    },
+    permition: {
+        type: Boolean,
+        required: true
     }
 })
 
