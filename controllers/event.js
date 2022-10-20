@@ -33,7 +33,8 @@ const eventController = {
         let order = 'asc'
         let query = {}
         if (req.query.category) {
-            query.category = new RegExp(req.query.category, 'i')
+            let categories = req.query.category.split(',')
+            query.category = categories.map(cat => new RegExp(cat, 'i'))
         }
         if (req.query.name) {
             query.name = new RegExp(req.query.name, 'i')
