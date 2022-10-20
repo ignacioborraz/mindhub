@@ -1,5 +1,6 @@
 const Event = require('../models/Event')
-let actualDate = new Date("2022-10-15")
+let actualDate = new Date(2022,9,15)
+console.log(actualDate)
 
 const eventController = {
     
