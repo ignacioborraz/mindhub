@@ -13,6 +13,11 @@ const controller = {
         if (req.query.name) {
             query.name = new RegExp(req.query.name, 'i')
         }
+        if (req.query.time==='past') {
+            query.date = { $lt: actualDate }
+        } else if (req.query.time==='upcoming') {
+            query.date = { $gte: actualDate }
+        }
         if (req.query.order) {
             order = req.query.order
         }
