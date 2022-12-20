@@ -119,7 +119,7 @@ let events = [
         place: "Showcase",
         capacity: 2000,
         price: 6
-    },,{
+    },{
         name: "Guardianes de la galaxia 3",
         image: "https://firebasestorage.googleapis.com/v0/b/amazing-events-364201.appspot.com/o/events%2Fcinema7.jpg?alt=media&token=57e3e867-259c-4df9-bfe5-7a3ef72c4c85",
         date: "2023-05-05",
@@ -128,7 +128,7 @@ let events = [
         place: "Showcase",
         capacity: 3000,
         price: 7
-    },,{
+    },{
         name: "10K for life",
         image: "https://firebasestorage.googleapis.com/v0/b/amazing-events-364201.appspot.com/o/events%2Fmaraton7.jpg?alt=media&token=bf354ec0-e307-422e-80d6-bcc80f883c9d",
         date: "2022-03-01",
@@ -395,7 +395,7 @@ let events = [
         place: "Teatro Monumental",
         capacity: 50000,
         price: 6
-    },,{
+    },{
         name: "Metallica",
         image: "https://firebasestorage.googleapis.com/v0/b/amazing-events-364201.appspot.com/o/events%2Fconcer1.jpg?alt=media&token=7a859f41-b268-4d06-8c42-c5961f9f25e9",
         date: "2022-01-22",

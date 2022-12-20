@@ -41,9 +41,9 @@ const schema = new mongoose.Schema({
     }
 })
 
-const Event = mongoose.model(
-    'eventos',
+const Evento = mongoose.model(
+    'eventosespectaculares',
     schema
 )
 
-module.exports = Event
+module.exports = Evento
