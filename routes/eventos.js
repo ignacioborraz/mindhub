@@ -4,7 +4,7 @@ var router = express.Router()
 const {
     all,
     one
-} = require('../controllers/producto')
+} = require('../controllers/evento')
 
 router.get('/', all)
 router.get('/:id', one)
