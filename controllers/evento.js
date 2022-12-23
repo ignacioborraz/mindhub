@@ -103,7 +103,7 @@ const controller = {
 
     create: async (req, res) => {
         try {
-            await Event.create(req.body)
+            await Evento.create(req.body)
             res.status(201).json({
                 response: 'creado',
                 success: true
