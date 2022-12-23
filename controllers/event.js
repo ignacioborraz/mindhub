@@ -99,6 +99,22 @@ const controller = {
                 success: false
             })
         }
+    },
+
+    create: async (req, res) => {
+        try {
+            await Event.create(req.body)
+            res.status(201).json({
+                response: 'created',
+                success: true
+            })
+        } catch (error) {
+            console.log(error)
+            res.status(400).json({
+                response: "error",
+                success: false
+            })
+        }
     }
 
 }

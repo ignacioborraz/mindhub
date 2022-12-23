@@ -3,10 +3,12 @@ var router = express.Router()
 
 const {
     all,
-    one
+    one,
+    create
 } = require('../controllers/evento')
 
 router.get('/', all)
 router.get('/:id', one)
+router.post('/',create)
 
 module.exports = router
