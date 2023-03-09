@@ -1,10 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect(
-    process.env.MONGO, {
-        useUnifiedTopology: true,
-        useNewUrlParser: true
-    }
-)
-.then(()=>console.log('connected to database successfully'))
-.catch(error=>console.log(error))
+mongoose.set('strictQuery', false)
+mongoose.connect(process.env.MONGO)
+    .then(() => console.log('database connected'))
+    .catch(err => console.log(err))
