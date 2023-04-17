@@ -1,6 +1,6 @@
 require('dotenv').config()
-require('./config/database')
-const Producto = require('./models/Producto')
+require('../../config/database')
+const Producto = require('../Producto')
 
 let products = [
     {
