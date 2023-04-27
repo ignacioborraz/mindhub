@@ -2,6 +2,22 @@ const Producto = require('../models/Producto')
 
 const controller = {
     
+    create: async (req,res) => {
+        try {
+            await Producto.create(req.body)
+            return res.status(201).json({
+                message: 'producto creado',
+                success: true
+            })
+        } catch (error) {
+            return res.status(400).json({
+                message: 'ocurrio un error',
+                success: false
+            })
+        }
+
+    },
+
     all: async (req, res) => {
         let order = 'asc'
         let query = {}

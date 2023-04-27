@@ -17,6 +17,7 @@
         "express": "~4.16.1",
         "googleapis": "^108.0.0",
         "http-errors": "~1.6.3",
+        "joi": "^17.9.2",
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^6.5.3",
         "morgan": "~1.9.1",

@@ -13,6 +13,6 @@ router.get('/', function(_req, res, _next) {
 router.use('/amazing', events)
 router.use('/animales', animales)
 router.use('/espectaculares', evento)
-router.use('/mindy', producto)
+router.use('/mindy/products', producto)
 
 module.exports = router
