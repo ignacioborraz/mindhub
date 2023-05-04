@@ -1,7 +1,7 @@
 const validator = (schema) => [
     (req, res, next) => {
         const validation = schema.validate(req.body, { abortEarly: false })
-        console.log(validation.error.details)
+        console.log(validation.error)
         if (validation.error) {
             return res.status(400).json({
                 success: false,
